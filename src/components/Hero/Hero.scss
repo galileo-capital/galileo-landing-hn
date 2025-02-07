@@ -1,0 +1,44 @@
+.Hero{
+    position: relative;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    top: calc(20px + 70px + 30vh);
+    &__title{
+        font-family: 'RoobertMono', monospace;
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    &__description{
+        max-width: 750px;
+        min-width: 750px;
+        text-align: center;
+        font-family: 'RoobertMono', monospace;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    &__btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        &-item{
+            background-color: transparent;
+            padding: 10px 40px 10px 40px;
+            font-size: 20px;
+            font-family: 'RoobertMono', monospace;
+            border-radius: 30px;
+            &-left{
+                background: linear-gradient(90deg, #FFFFFF 0%, #E1D2FF 100%);
+                color: black;
+            }
+            &-right{
+                background: linear-gradient(90deg, #5B13EA 0%, #5115C9 100%);
+            }
+        }
+    }
+}

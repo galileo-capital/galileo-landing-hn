@@ -1,0 +1,13 @@
+.Background{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0 auto;
+    img{
+        min-width: 100vw;
+        
+    }
+}
