@@ -21,6 +21,15 @@
             font-family: 'RoobertMono', monospace;
             color: #7C49E1;
         }
+        &-img{
+          margin: 0 auto;
+          margin-bottom: 50px;
+          margin-top: 50px;
+          width: 50%;
+          @media (max-width: 880px){
+            width: 80%;
+          }
+        }
         &-partnes{
             width: 100%;
             display: flex;

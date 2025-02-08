@@ -3,14 +3,7 @@ import './Action.scss';
         <div className='Action' id='Action'>
             <div className='Action__container'>
                 <p className='Action__container-title'>/ Galileo in Action /</p>
-                {/* херня */}
-                <div class="container">
-                    <div class="circle main-circle">$26M+ in transactions processed in 2024</div>
-                    <div class="circle small-circle tether">tether</div>
-                    <div class="circle small-circle bitgo">BitGo</div>
-                    <div class="circle small-circle circle-logo">Circle</div>
-                </div>
-                {/* конец херни */}
+                <img src="./img/Action/bubbles.svg" alt="" className='Action__container-img'/>
                 <div className='Action__container-partnes'>
                     <img src="./img/Action/skillful.svg" alt="" />
                     <img src="./img/Action/betcris.svg" alt="" />
