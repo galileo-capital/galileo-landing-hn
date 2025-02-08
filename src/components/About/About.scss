@@ -1,0 +1,31 @@
+.About{
+    color: white;
+    font-size: 100px;
+    margin-top: 200px;
+    background-color: black;
+    box-shadow: 0 0 50px 50px rgba(0, 0, 0, 1);
+    width: 100%;
+    &__container{
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    &__title{
+        color: #562BAA;
+        font-size: 14px;
+        font-family: 'RoobertMono', monospace;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        @media screen and (max-width: 880px){
+            font-size: 12px;
+        }
+    }
+    &__description{
+        font-family: 'RoobertMono', monospace;
+        font-size: 40px;
+        max-width: 1250px;
+        @media screen and (max-width: 880px){
+            font-size: 25px;
+        }
+    }
+}

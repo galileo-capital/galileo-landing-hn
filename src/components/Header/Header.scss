@@ -32,7 +32,12 @@
     color: #B497E5;
     font-size: 14px;
     font-family: 'RoobertMono', monospace;
+    transition: transform 0.3s ease-in-out;
 }
+
+.center a:hover {
+    transform: scale(1.1);
+  }
 
 .right{
     button{
@@ -42,11 +47,15 @@
         border-radius: 30px;
         font-size: 16px;
         font-family: 'RoobertMono', monospace;
+        transition: transform 0.3s ease-in-out;
         @media screen and (max-width: 880px){
             display: none;
         }
         img{
             width: 12px;
         }
+    }
+    button:hover {
+        transform: scale(1.1);
     }
 }

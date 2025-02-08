@@ -5,11 +5,11 @@ import './Header.scss';
                 <img src="./img/logo.svg" alt="" />
             </div>
             <div className='Header__item center'>
-                <a href='#'>/ About /</a>
-                <a href='#'>/ Features /</a>
-                <a href='#'>/ aartners /</a>
-                <a href='#'>/ Team /</a>
-                <a href='#'>/ Contacts /</a>
+                <a href='#about'>/ About /</a>
+                <a href='#Features'>/ Features /</a>
+                <a href='#Action'>/ Partners /</a>
+                <a href='#Team'>/ Team /</a>
+                <a href='#Footer'>/ Contacts /</a>
             </div>
             <div className='Header__item right'>
                 <button>Get the App <img src="./img/arrow.png" alt="" /></button>

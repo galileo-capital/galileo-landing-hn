@@ -1,17 +1,28 @@
 .Hero{
-    position: relative;
-    z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
-    top: calc(20px + 70px + 30vh);
+    margin-top: calc(20px + 70px + 30vh);
     &__title{
         font-family: 'RoobertMono', monospace;
         font-size: 60px;
         margin-bottom: 20px;
+        @media screen and (max-width: 1200px){
+            font-size: 50px;
+        }
+        @media screen and (max-width: 960px){
+            font-size: 40px;
+        }
+        @media screen and (max-width: 880px){
+            max-width: 400px;
+            text-align: center;
+        }
+        @media screen and (max-width: 390px){
+            font-size: 30px;
+        }
     }
     &__description{
         max-width: 750px;
@@ -20,6 +31,12 @@
         font-family: 'RoobertMono', monospace;
         font-size: 18px;
         margin-bottom: 40px;
+        @media screen and (max-width: 880px){
+            max-width: 307px;
+            min-width: 307px;
+            font-size: 16px;
+            font-weight: lighter;
+        }
     }
     &__btn{
         display: flex;
@@ -32,6 +49,11 @@
             font-size: 20px;
             font-family: 'RoobertMono', monospace;
             border-radius: 30px;
+            transition: transform 0.3s ease-in-out;
+            @media screen and (max-width: 450px){
+                font-size: 14px;
+                padding: 5px 25px 5px 25px;
+            }
             &-left{
                 background: linear-gradient(90deg, #FFFFFF 0%, #E1D2FF 100%);
                 color: black;
@@ -39,6 +61,9 @@
             &-right{
                 background: linear-gradient(90deg, #5B13EA 0%, #5115C9 100%);
             }
+        }
+        &-item:hover{
+            transform: scale(1.1);
         }
     }
 }
