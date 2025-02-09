@@ -12,6 +12,39 @@
     padding-top: 20px;
     &__item{
         display: flex;
+        &-burger{
+            display: none;
+            @media screen and (max-width: 880px){
+                width: 30px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                position: relative;
+                z-index: 10;
+                align-items: end;
+                span {
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    background: white;
+                    transition: 0.3s;
+                }
+                span:nth-child(2){
+                    width: 70%;
+                }
+            }
+        }
+        &-burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        &-burger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        &-burger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
     }
 }
 

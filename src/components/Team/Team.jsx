@@ -17,7 +17,8 @@ import React, { useRef } from "react";
                 <div className='Team__member'>
                 <Swiper 
                  breakpoints={{
-                    320: { slidesPerView: 2 },
+                    0: { slidesPerView: 1 },
+                    650: { slidesPerView: 2 },
                     880: { slidesPerView: 4 },
                   }}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}

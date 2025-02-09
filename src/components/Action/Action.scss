@@ -37,10 +37,15 @@
             align-items: center;
             margin-bottom: 120px;
             gap: 5px;
-            @media screen and (max-width: 1050px){
-              img{
-                width: 10%;
-              }
+            @media screen and (max-width: 1100px){
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 20px;
+          }
+          @media screen and (max-width: 350px){
+            img{
+              width: 25%;
+            }
           }
         }
         &-demo{

@@ -1,0 +1,51 @@
+.Modal {
+    display: none;
+    @media (max-width: 880px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 120vh;
+        background: rgba(0, 0, 0, 1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 998;
+        &__logo{
+            margin-top: 30px;
+            margin-bottom: 31px;
+        }
+        a{
+            font-family: 'RoobertMono', monospace;
+            font-size: 14px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        &__social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            &-item{
+                padding: 7px 7px 7px 7px;
+                background: linear-gradient(0deg, #5B13EA 0%, #5115C9 100%);
+                border-radius: 9px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                transition: transform 0.3s ease-in-out;
+                img{
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+    
+  }
+  
+  

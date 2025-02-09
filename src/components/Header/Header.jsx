@@ -1,8 +1,11 @@
+import { observer } from "mobx-react-lite";
 import './Header.scss';
-    export default () => {return (
+import { modalStore } from "../../store/modal";
+const Header = observer(() => {
+    return (
         <div className='Header'>
             <div className='Header__item left'>
-                <img src="./img/logo.svg" alt="" />
+                <img src="./img/logo.svg" alt="" style={{ opacity: modalStore.isOpen ? 0 : 1, transition: "opacity 0.3s ease" }}/>
             </div>
             <div className='Header__item center'>
                 <a href='#about'>/ About /</a>
@@ -13,6 +16,15 @@ import './Header.scss';
             </div>
             <div className='Header__item right'>
                 <button>Get the App <img src="./img/arrow.png" alt="" /></button>
+                <div className={`Header__item-burger ${modalStore.isOpen ? "active" : ""}`}
+          onClick={modalStore.toggleModal} >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    )}
+  );
+});
+
+export default Header;

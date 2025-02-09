@@ -6,11 +6,13 @@ import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Hero from "./components/Hero/Hero"
 import Team from "./components/Team/Team"
+import Modal from "./components/Modal/Modal"
 
 function App() {
 
   return (
     <>
+      <Modal />
       {/* <Background /> */}
       <Header />
       <Hero />

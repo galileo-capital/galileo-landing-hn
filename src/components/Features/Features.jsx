@@ -46,11 +46,13 @@ import './Features.scss';
                         <p className='Features__bottom-item-container-description'>Integrated payroll, utilities, and World Wide payments</p>
                     </div>
                 </div>
-                <div className='Features__bottom-item'>
-                    <div className='Features__bottom-item-container soon'>
-                        <img src="./img/Features/sol.svg" alt="" />
-                        <p className='Features__bottom-item-container-title'>Pay with your Solana Memes through your prepaid debit card </p>
-                        <p className='Features__bottom-item-container-description'>Coming soon</p>
+                <div className='Features__bottom-item top'>
+                    <div className='Features__bottom-item-one'>
+                        <div className='Features__bottom-item-container soon'>
+                            <img src="./img/Features/sol.svg" alt="" />
+                            <p className='Features__bottom-item-container-title'>Pay with your Solana Memes through your prepaid debit card </p>
+                            <p className='Features__bottom-item-container-description'>Coming soon</p>
+                        </div>
                     </div>
                 </div>
             </div>

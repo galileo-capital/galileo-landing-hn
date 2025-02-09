@@ -6,6 +6,9 @@
     max-width: 1400px;
     margin: 0 auto;
     margin-top: calc(20px + 70px + 30vh);
+    @media screen and (max-width: 880px){
+        margin-top: calc(20px + 70px + 10vh);
+    }
     &__title{
         font-family: 'RoobertMono', monospace;
         font-size: 60px;
