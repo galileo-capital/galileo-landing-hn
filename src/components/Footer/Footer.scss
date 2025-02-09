@@ -41,7 +41,7 @@
     &__title {
         margin-top: 250px;
         font-size: 50px;
-        font-family: 'RobertTRIAL', monospace;
+        font-family: 'RoobertTRIAL-Light', monospace;
 
         @media (max-width: 880px) {
             font-size: 37px;
@@ -67,7 +67,7 @@
             align-items: center;
             margin-bottom: 170px;
             transition: transform 0.3s ease-in-out;
-            font-family: 'RobertTRIAL', monospace;
+            font-family: 'RoobertTRIAL-Light', monospace;
 
             @media (max-width: 880px) {
                 width: 160px;
@@ -146,7 +146,7 @@
             }
 
             &-company {
-                font-family: 'RobertTRIAL', monospace;
+                font-family: 'RoobertTRIAL-Light', monospace;
                 font-size: 12px;
                 color: #493C64;
                 font-weight: lighter;
@@ -171,7 +171,7 @@
             gap: 10px;
 
             &-link {
-                font-family: 'RobertTRIAL', monospace;
+                font-family: 'RoobertTRIAL-Light', monospace;
                 color: #F1F1F1;
                 font-size: 16px;
                 font-weight: lighter;
@@ -187,7 +187,7 @@
             }
 
             &-company {
-                font-family: 'RobertTRIAL', monospace;
+                font-family: 'RoobertTRIAL-Light', monospace;
                 font-size: 12px;
                 color: #493C64;
                 font-weight: lighter;
