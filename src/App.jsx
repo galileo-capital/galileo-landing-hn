@@ -18,22 +18,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
-  const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
-
-  const handleMouseMove = (event) => {
-    const { clientX, clientY } = event;
-
-    setGradientPosition({ x: clientX, y: clientY });
-  };
 
   return (
-    <div onMouseMove={handleMouseMove}>
+    <div style={{
+      width: " 100%",
+      overflow: "hidden",
+    }}>
       <Modal />
       <Background />
       <Header />
       <Hero />
       <About />
-      <Features bgX={gradientPosition.x} bgY={gradientPosition.y} />
+      <Features />
       <Action />
       <Team />
       <Footer />

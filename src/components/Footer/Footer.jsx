@@ -28,7 +28,7 @@ export default () => {
             </div>
             <div className='Footer_decor_wrapper'>
                 <div className='Footer_decor free_img'>
-                    <img src="/img/space.webp" alt="" />
+                    <iframe src='https://my.spline.design/glowingplanetparticles-490baebc03e151fcf1b3dbc502c0e540/' frameborder='0' width='100%' height='100%'></iframe>
                 </div>
             </div>
         </div>

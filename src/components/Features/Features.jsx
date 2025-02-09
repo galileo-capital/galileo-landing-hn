@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Element from './Element';
 import './Features.scss';
-export default ({ bgX, bgY }) => {
+export default () => {
 
 
     return (
@@ -32,7 +32,7 @@ export default ({ bgX, bgY }) => {
                             content: 'Access global financial opportunities with ease',
                         },
                     ].map((el, index) => {
-                        return <Element top={index % 2} bgX={bgX} bgY={bgY} small img={el.img} title={el.title} content={el.content} />
+                        return <Element top={index % 2} small img={el.img} title={el.title} content={el.content} />
                     })
                 }
             </div>
@@ -58,7 +58,7 @@ export default ({ bgX, bgY }) => {
                             soon: true
                         }
                     ].map((el, index) => {
-                        return <Element top={(index + 1) % 2} soon={el.soon} bgX={bgX} bgY={bgY} img={el.img} title={el.title} content={el.content} />
+                        return <Element top={(index + 1) % 2} soon={el.soon} img={el.img} title={el.title} content={el.content} />
                     })
                 }
             </div>

@@ -13,18 +13,15 @@
         align-items: end !important;
         z-index: -1;
 
-        @media(max-width: 1000px) {
-            top: -200px;
-        }
-
         &_wrapper {
             width: 100%;
             margin: 0 auto;
             max-width: 1500px;
 
-            img {
-                rotate: 180deg;
-                max-width: 150vw;
+            iframe {
+                height: 800px;
+                position: relative;
+                top: 100px;
             }
         }
     }

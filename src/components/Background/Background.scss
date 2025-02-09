@@ -4,7 +4,17 @@
     z-index: -1;
 
     @media(max-width: 650px) {
-        top: 100px;
+        top: -50px;
+    }
+
+    &_inner {
+        width: 100%;
+        min-height: 100vh;
+
+        iframe {
+            height: 100vh;
+        }
+
     }
 
     &_wrapper {
