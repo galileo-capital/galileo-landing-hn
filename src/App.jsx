@@ -8,20 +8,36 @@ import Hero from "./components/Hero/Hero"
 import Team from "./components/Team/Team"
 import Modal from "./components/Modal/Modal"
 
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger, TextPlugin } from "gsap/all"
+import { useState } from "react"
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
+
 function App() {
+  const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
+
+  const handleMouseMove = (event) => {
+    const { clientX, clientY } = event;
+
+    setGradientPosition({ x: clientX, y: clientY });
+  };
 
   return (
-    <>
+    <div onMouseMove={handleMouseMove}>
       <Modal />
-      {/* <Background /> */}
+      <Background />
       <Header />
       <Hero />
       <About />
-      <Features />
+      <Features bgX={gradientPosition.x} bgY={gradientPosition.y} />
       <Action />
       <Team />
       <Footer />
-    </>
+    </div>
   )
 }
 

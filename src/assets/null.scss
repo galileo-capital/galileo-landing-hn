@@ -112,6 +112,11 @@ button {
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 input,
@@ -127,6 +132,8 @@ textarea {
     align-items: center;
     position: relative;
 }
+
+
 
 
 html {
@@ -156,4 +163,11 @@ body {
         align-content: baseline;
         justify-content: flex-start;
     }
+
+
+}
+
+
+img {
+    user-select: none;
 }

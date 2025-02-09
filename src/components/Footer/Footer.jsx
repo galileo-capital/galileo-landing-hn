@@ -1,28 +1,19 @@
+import Media from '../Media/Media';
 import './Footer.scss';
-    export default () => {return (
+export default () => {
+    return (
         <div className='Footer' id='Footer'>
             <div className='Footer__container'>
                 <p className='Footer__title'>Start Using Galileo Today!</p>
                 <div className='Footer__btn'>
                     <button className='Footer__btn-item Footer__btn-item-left'>Contact us</button>
-                    <button className='Footer__btn-item Footer__btn-item-right'>Get the App  <img src="./img/arrow.png" alt="" /></button>
+                    <button className='Footer__btn-item Footer__btn-item-right'>Get the App  <img src="/img/arrow.png" alt="" /></button>
                 </div>
                 <div className='Footer__item'>
                     <div className='Footer__item-left'>
-                        <img src="./img/logo.svg" alt="" className='Footer__item-left-logo'/>
+                        <img src="/img/logo.svg" alt="" className='Footer__item-left-logo' />
                         <div className='Footer__item-left-social'>
-                            <div className='Footer__item-left-social-item'>
-                                <img src="./img/social/twitter.png" alt="" />
-                            </div>
-                            <div className='Footer__item-left-social-item'>
-                                <img src="./img/social/insta.png" alt="" />
-                            </div>
-                            <div className='Footer__item-left-social-item'>
-                                <img src="./img/social/face.png" alt="" />
-                            </div>
-                            <div className='Footer__item-left-social-item'>
-                                <img src="./img/social/link.png" alt="" />
-                            </div>
+                            <Media />
                         </div>
                         <p className='Footer__item-left-company'>Galileo Capital LLC. 2025. All rights reserved</p>
                     </div>
@@ -35,5 +26,11 @@ import './Footer.scss';
                     </div>
                 </div>
             </div>
+            <div className='Footer_decor_wrapper'>
+                <div className='Footer_decor free_img'>
+                    <img src="/img/space.webp" alt="" />
+                </div>
+            </div>
         </div>
-    )}
+    )
+}

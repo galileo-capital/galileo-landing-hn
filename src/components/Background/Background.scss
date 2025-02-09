@@ -1,13 +1,19 @@
-.Background{
-    position: absolute;
+.Background {
+    width: 100% !important;
+    align-items: start !important;
     z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin: 0 auto;
-    img{
-        min-width: 100vw;
-        
+
+    @media(max-width: 650px) {
+        top: 100px;
+    }
+
+    &_wrapper {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1500px;
+
+        img {
+            max-width: 150vw;
+        }
     }
 }

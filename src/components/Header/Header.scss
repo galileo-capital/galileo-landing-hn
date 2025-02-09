@@ -1,4 +1,4 @@
-.Header{
+.Header {
     position: relative;
     left: 0;
     top: 0;
@@ -10,11 +10,14 @@
     margin: 0 auto;
     z-index: 999;
     padding-top: 20px;
-    &__item{
+
+    &__item {
         display: flex;
-        &-burger{
+
+        &-burger {
             display: none;
-            @media screen and (max-width: 880px){
+
+            @media screen and (max-width: 880px) {
                 width: 30px;
                 height: 20px;
                 display: flex;
@@ -24,6 +27,7 @@
                 position: relative;
                 z-index: 10;
                 align-items: end;
+
                 span {
                     display: block;
                     height: 2px;
@@ -31,37 +35,49 @@
                     background: white;
                     transition: 0.3s;
                 }
-                span:nth-child(2){
+
+                span:nth-child(2) {
                     width: 70%;
                 }
             }
         }
+
+        .active {
+
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+
         &-burger.active span:nth-child(2) {
             opacity: 0;
         }
+
         &-burger.active span:nth-child(3) {
             transform: translateY(-9px) rotate(-45deg);
         }
+
         &-burger.active span:nth-child(1) {
             transform: translateY(9px) rotate(45deg);
         }
     }
 }
 
-.left{
-    img{
+.left {
+    img {
         width: 100%;
     }
 }
 
-.center{
+.center {
     gap: 30px;
-    @media screen and (max-width: 880px){
+
+    @media screen and (max-width: 880px) {
         display: none;
     }
 }
 
-.center a{
+.center a {
     color: #B497E5;
     font-size: 14px;
     font-family: 'RoobertMono', monospace;
@@ -70,10 +86,10 @@
 
 .center a:hover {
     transform: scale(1.1);
-  }
+}
 
-.right{
-    button{
+.right {
+    button {
         background-color: transparent;
         background: linear-gradient(90deg, #5B13EA 0%, #5115C9 100%);
         padding: 8px 15px 8px 15px;
@@ -81,13 +97,16 @@
         font-size: 16px;
         font-family: 'RoobertMono', monospace;
         transition: transform 0.3s ease-in-out;
-        @media screen and (max-width: 880px){
+
+        @media screen and (max-width: 880px) {
             display: none;
         }
-        img{
+
+        img {
             width: 12px;
         }
     }
+
     button:hover {
         transform: scale(1.1);
     }
