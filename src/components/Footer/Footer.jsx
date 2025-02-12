@@ -1,36 +1,95 @@
+import { useState } from 'react';
 import Media from '../Media/Media';
 import './Footer.scss';
 export default () => {
+    const [showTerms, setshowTerms] = useState(false);
+
     return (
-        <div className='Footer' id='Footer'>
-            <div className='Footer__container'>
-                <p className='Footer__title'>Start Using Galileo Today!</p>
-                <div className='Footer__btn'>
-                    <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-left'>Contact us</a>
-                    <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-right'>Get the App  <img src="/img/arrow.png" alt="" /></a>
-                </div>
-                <div className='Footer__item'>
-                    <div className='Footer__item-left'>
-                        <img src="/img/logo.svg" alt="" className='Footer__item-left-logo' />
-                        <div className='Footer__item-left-social'>
-                            <Media />
-                        </div>
-                        <p className='Footer__item-left-company'>Galileo Capital LLC. 2025. All rights reserved</p>
+        <>
+            {showTerms && <div className='Footer_terms' onClick={() => { setshowTerms(false) }}>
+                <div className='Footer_terms_inner'>
+                    <div className='Footer_terms_header'>
+                        Privacy Policy
                     </div>
-                    <div className='Footer__item-right'>
-                        <a href="#Features" className='Footer__item-right-link'>Features</a>
-                        <a href="#About" className='Footer__item-right-link'>About Galileo</a>
-                        {/* <a href="#Footer" className='Footer__item-right-link'>Contact Us</a> */}
-                        <a href="#" className='Footer__item-right-link'>Terms & Privacy</a>
-                        <p className='Footer__item-right-company'>*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company</p>
+
+                    <div className='Footer_terms_header'>
+                        1. General Provisions
+                    </div>
+                    This Privacy Policy ("Policy") explains how Galileo ("We," "Our Service") collects, uses, and protects user data. By using Our Service, you agree to this Policy.
+                    <div className='Footer_terms_header'>
+                        2. Data Collection and Use
+                    </div>
+                    We may collect:
+                    <br />- Personal Data: Name, email, phone number, and other information you provide when signing up or using our services.
+                    <br />- Financial Data: Transaction history, payment details, and account balances related to digital assets and fiat transactions.
+                    <br />- Technical Data: IP address, device type, browser, and usage patterns to improve performance and security.
+
+                    <br /><br />Data is used to:
+                    <br />- Provide seamless financial services, including digital asset transactions, payments, and investment tools.
+                    <br />- Enhance security, prevent fraud, and comply with legal obligations.
+                    <br />- Improve the user experience and develop new features.
+
+                    <div className='Footer_terms_header'>
+
+
+                        3. Data Security and Retention
+                    </div>
+                    <br />- Data is encrypted and stored securely.
+                    <br />- We do not share data with third parties unless required for service functionality or legal compliance.
+                    <br />- Data is retained only as long as necessary for service operation or regulatory requirements.
+                    <div className='Footer_terms_header'>
+
+
+                        4. User Rights
+                    </div>
+                    Users can:
+                    <br />- Request access, correction, or deletion of their data.
+                    <br />- Opt out of marketing communications.
+                    <br />- Manage data preferences through account settings.
+
+                    <div className='Footer_terms_header'>
+                        5. Third-Party Services
+                    </div>
+                    Some transactions and financial services may involve third-party providers. We ensure compliance with relevant regulations but encourage users to review their privacy policies.
+
+                    <div className='Footer_terms_header'>
+
+                        6. Updates to the Policy
+                    </div>
+                    We may update this Policy as our services evolve. Changes take effect upon publication.
+
+                    <div className='Footer_terms_header'>
+
+                        7. Contact Information
+                    </div>
+                    For inquiries about this Policy, contact us.
+                </div>
+            </div>}
+            <div className='Footer' id='Footer'>
+                <div className='Footer__container'>
+                    <p className='Footer__title'>Start Using Galileo Today!</p>
+                    <div className='Footer__btn'>
+                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-left'>Contact us</a>
+                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-right'>Get the App  <img src="/img/arrow.png" alt="" /></a>
+                    </div>
+                    <div className='Footer__item'>
+                        <div className='Footer__item-left'>
+                            <img src="/img/logo.svg" alt="" className='Footer__item-left-logo' />
+                            <div className='Footer__item-left-social'>
+                                <Media />
+                            </div>
+                            <p className='Footer__item-left-company'>Galileo Capital LLC. 2025. All rights reserved</p>
+                        </div>
+                        <div className='Footer__item-right'>
+                            <a href="#Features" className='Footer__item-right-link'>Features</a>
+                            <a href="#About" className='Footer__item-right-link'>About Galileo</a>
+                            {/* <a href="#Footer" className='Footer__item-right-link'>Contact Us</a> */}
+                            <div className='Footer__item-right-link' onClick={() => { setshowTerms(true) }}>Terms & Privacy</div>
+                            <p className='Footer__item-right-company'>*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            {/* <div className='Footer_decor_wrapper'>
-                <div className='Footer_decor free_img'>
-                    <iframe src='https://my.spline.design/glowingplanetparticles-490baebc03e151fcf1b3dbc502c0e540/' frameborder='0' width='100%' height='100%'></iframe>
-                </div>
-            </div> */}
-        </div>
+        </>
     )
 }

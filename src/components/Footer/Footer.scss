@@ -1,5 +1,5 @@
 .Footer {
-    // background-image: url(../../../public/img/bg.svg);
+    background: linear-gradient(to top, #000, #0000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,45 @@
     background-size: cover;
     // box-shadow: 0 0 150px 150px #000000;
     overflow: hidden;
+
+
+    &_terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(45deg, rgba(#6C1EEC, .8), #0008);
+        z-index: 999;
+        padding: 32px;
+        cursor: pointer;
+
+        &_header {
+            font-size: 24px;
+            font-weight: 700;
+
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+
+        &_inner {
+            background: #000;
+            border-radius: 32px;
+            border-top: 1px solid #6C1EEC;
+            border-right: 1px solid #6C1EEC;
+            padding: 28px;
+            width: 100%;
+            max-width: 800px;
+            max-height: calc(100vh - 64px);
+            overflow-y: scroll;
+            cursor: default;
+
+        }
+    }
 
     &_decor {
         width: 100% !important;
@@ -199,6 +238,7 @@
             gap: 10px;
 
             &-link {
+                cursor: pointer;
                 font-family: 'RoobertTRIAL-Light', monospace;
                 color: #F1F1F1;
                 font-size: 16px;

@@ -1,0 +1,39 @@
+.Loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    background: #000b;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    &_text {
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        animation: loader .5s infinite alternate ease-in-out;
+    }
+
+    @keyframes loader {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: .5;
+        }
+    }
+}

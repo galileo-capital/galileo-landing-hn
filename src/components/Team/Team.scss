@@ -57,6 +57,8 @@
         &-item {
             display: flex;
             justify-content: center;
+            background: #0008;
+            backdrop-filter: blur(10px);
 
             &-bottom {
                 // background: linear-gradient(180deg, #0D0D24 0%, #5613DB 100%);

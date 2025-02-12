@@ -102,7 +102,7 @@ button {
     vertical-align: baseline;
     box-sizing: border-box;
     color: white;
-    font-family: 'Montserrat';
+    font-family: "RoobertTRIAL-Medium";
     letter-spacing: -0.5px;
 }
 
@@ -170,4 +170,36 @@ body {
 
 img {
     user-select: none;
+}
+
+/* Общие стили для всего документа */
+body {
+    background-color: black;
+    scrollbar-width: thin;
+    /* Для Firefox */
+    scrollbar-color: #6C1EEC black;
+    /* Цвет ползунка и фона */
+}
+
+/* Для Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Ширина полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* Цвет фона */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6C1EEC;
+    /* Цвет ползунка */
+    border-radius: 10px;
+    /* Скругление */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5815C4;
+    /* Цвет при наведении */
 }

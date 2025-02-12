@@ -7,6 +7,7 @@ import Header from "./components/Header/Header"
 import Hero from "./components/Hero/Hero"
 import Team from "./components/Team/Team"
 import Modal from "./components/Modal/Modal"
+import Loader from "./components/Loader/Loader"
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -25,7 +26,9 @@ function App() {
       width: "100%",
       overflow: "hidden",
     }}>
-      <Modal />
+      {/* <Modal /> */}
+      {/* <Modal /> */}
+      <Loader />
       <Header />
       <Hero />
       <Background />
