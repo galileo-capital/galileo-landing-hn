@@ -8,14 +8,14 @@ const Header = observer(() => {
                 <img src="/img/logo.svg" alt="" style={{ opacity: modalStore.isOpen ? 0 : 1, transition: "opacity 0.3s ease" }} />
             </div>
             <div className='Header__item center'>
-                <a href='#about'>/ About /</a>
-                <a href='#Features'>/ Features /</a>
-                <a href='#Action'>/ Partners /</a>
-                <a href='#Team'>/ Team /</a>
-                <a href='#Footer'>/ Contacts /</a>
+                <a href='#About'><span>/</span> About <span>/</span></a>
+                <a href='#Features'><span>/</span> Features <span>/</span></a>
+                <a href='#Partners'><span>/</span> Partners <span>/</span></a>
+                <a href='#Team'><span>/</span> Team <span>/</span></a>
+                <a href='#Footer'><span>/</span> Contacts <span>/</span></a>
             </div>
             <div className='Header__item right'>
-                <button>Get the App <img src="/img/arrow.png" alt="" /></button>
+                <a>Get the App <img src="/img/arrow.png" alt="" /></a>
                 <div className={`Header__item-burger ${modalStore.isOpen ? "active" : ""}`}
                     onClick={modalStore.toggleModal} >
                     <span></span>

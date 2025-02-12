@@ -81,33 +81,51 @@
     color: #B497E5;
     font-size: 14px;
     font-family: 'RoobertTRIAL-Light', monospace;
-    transition: transform 0.3s ease-in-out;
+
+    span {
+        display: inline-block;
+        color: #B497E5;
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 .center a:hover {
-    transform: scale(1.1);
+
+    span {
+        transform: rotate(70deg);
+    }
+
 }
 
 .right {
-    button {
+    a {
         background-color: transparent;
-        background: linear-gradient(90deg, #5B13EA 0%, #5115C9 100%);
+        background: linear-gradient(90deg, #5B13EA 0%, #5115C9 40%, #E1D2FF 60%, #fff 100%);
+        background-position: 0% 0%;
+        background-size: 250% 200%;
         padding: 8px 15px 8px 15px;
         border-radius: 30px;
         font-size: 16px;
         font-family: 'RoobertTRIAL-Medium', monospace;
-        transition: transform 0.3s ease-in-out;
+        transition: background-position 0.3s ease-in-out, color 300ms;
 
         @media screen and (max-width: 880px) {
             display: none;
         }
 
         img {
-            width: 12px;
+            transition: filter 200ms;
         }
     }
 
-    button:hover {
-        transform: scale(1.1);
+    a:hover {
+        // transform: scale(1.1);
+        color: #000;
+        background-position: 100% 0%;
+
+        img {
+            filter: invert(1);
+        }
+
     }
 }

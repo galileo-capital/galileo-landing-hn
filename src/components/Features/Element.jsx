@@ -1,10 +1,10 @@
 
-export default ({ small = false, img, title, content, soon = false, top }) => {
+export default ({ index, small = false, img, title, content, soon = false, top }) => {
 
 
     return (
         <div
-            className={`Features__bottom-item ${top ? 'top' : 'bottom'} ${small ? 'Features__bottom-item_small' : ''}`}
+            className={`Fel_${index} Features__bottom-item ${top ? 'top' : 'bottom'} ${small ? 'Features__bottom-item_small' : ''}`}
         >
             {
                 soon ? <div className='Features__bottom-item-one'>

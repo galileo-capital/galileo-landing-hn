@@ -29,7 +29,7 @@ export default () => {
                                 <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
                                 <p className='Team__member-item-name'>Max Xiques</p>
                                 <p className='Team__member-item-position'>CEO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.png" alt="" /></button>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-top'>
@@ -37,7 +37,7 @@ export default () => {
                                 <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
                                 <p className='Team__member-item-name'>Alberto Castro</p>
                                 <p className='Team__member-item-position'>COO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.png" alt="" /></button>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
@@ -45,7 +45,7 @@ export default () => {
                                 <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
                                 <p className='Team__member-item-name'>Andres Barboza</p>
                                 <p className='Team__member-item-position'>CTO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.png" alt="" /></button>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-top'>
@@ -53,7 +53,7 @@ export default () => {
                                 <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
                                 <p className='Team__member-item-name'>Jose Quesada</p>
                                 <p className='Team__member-item-position'>COO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.png" alt="" /></button>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
@@ -61,7 +61,7 @@ export default () => {
                                 <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
                                 <p className='Team__member-item-name'>Daniel Ureña</p>
                                 <p className='Team__member-item-position'>CMO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.png" alt="" /></button>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
                     </Swiper>

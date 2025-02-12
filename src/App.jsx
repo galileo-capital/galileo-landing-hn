@@ -12,6 +12,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, TextPlugin } from "gsap/all"
 import { useState } from "react"
+
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -21,18 +22,20 @@ function App() {
 
   return (
     <div style={{
-      width: " 100%",
+      width: "100%",
       overflow: "hidden",
     }}>
       <Modal />
-      <Background />
       <Header />
       <Hero />
+      <Background />
       <About />
       <Features />
       <Action />
       <Team />
       <Footer />
+      <Background bottom />
+
     </div>
   )
 }
