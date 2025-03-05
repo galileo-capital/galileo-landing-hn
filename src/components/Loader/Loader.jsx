@@ -1,10 +1,17 @@
 import './Loader.scss';
 import loaderStore from "../../store/loaderStore";
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { observer } from 'mobx-react-lite';
+import langStore from '../../store/langStore';
 
-export default () => {
+export default observer(() => {
     const [loaderCounter, setloaderCounter] = useState(1);
     let loaderCounterInt = 0;
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(langStore.lang);
+    }, [langStore.lang])
 
     useEffect(() => {
         loaderCounterInt = setInterval(() => {
@@ -22,7 +29,7 @@ export default () => {
                 loaderStore.loading && <div className='Loader'>
                     <img src="/img/loader.svg" alt="" />
                     <div className='Loader_text'>
-                        Loading
+                        {t('Loading')}
                         {Array(((loaderCounter) % 4))
                             .fill(0)
                             .map((_, index) => {
@@ -33,4 +40,4 @@ export default () => {
             }
         </>
     )
-}
+})

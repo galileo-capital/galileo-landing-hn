@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Media from '../Media/Media';
 import './Footer.scss';
-export default () => {
+import { useTranslation } from 'react-i18next';
+import { observer } from 'mobx-react-lite';
+import langStore from '../../store/langStore';
+export default observer(() => {
     const [showTerms, setshowTerms] = useState(false);
+
+
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(langStore.lang);
+    }, [langStore.lang])
 
     return (
         <>
             {showTerms && <div className='Footer_terms' onClick={() => { setshowTerms(false) }}>
                 <div className='Footer_terms_inner'>
                     <div className='Footer_terms_header'>
-                        Privacy Policy
+                        {t('Privacy Policy')}
                     </div>
 
                     <div className='Footer_terms_header'>
@@ -67,10 +76,10 @@ export default () => {
             </div>}
             <div className='Footer' id='Footer'>
                 <div className='Footer__container'>
-                    <p className='Footer__title'>Start Using Galileo Today!</p>
+                    <p className='Footer__title'>{t('Start Using Galileo Today!')}</p>
                     <div className='Footer__btn'>
-                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-left'>Contact us</a>
-                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-right'>Get the App  <img src="/img/arrow.png" alt="" /></a>
+                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-left'>{t('Contact us')}</a>
+                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-right'>{t('Get the App')}  <img src="/img/arrow.png" alt="" /></a>
                     </div>
                     <div className='Footer__item'>
                         <div className='Footer__item-left'>
@@ -78,18 +87,18 @@ export default () => {
                             <div className='Footer__item-left-social'>
                                 <Media />
                             </div>
-                            <p className='Footer__item-left-company'>Galileo Capital LLC. 2025. All rights reserved</p>
+                            <p className='Footer__item-left-company'>{t('Galileo Capital LLC. 2025. All rights reserved')}</p>
                         </div>
                         <div className='Footer__item-right'>
-                            <a href="#Features" className='Footer__item-right-link'>Features</a>
-                            <a href="#About" className='Footer__item-right-link'>About Galileo</a>
+                            <a href="#Features" className='Footer__item-right-link'>{t('Features')}</a>
+                            <a href="#About" className='Footer__item-right-link'>{t('About Galileo')}</a>
                             {/* <a href="#Footer" className='Footer__item-right-link'>Contact Us</a> */}
-                            <div className='Footer__item-right-link' onClick={() => { setshowTerms(true) }}>Terms & Privacy</div>
-                            <p className='Footer__item-right-company'>*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company</p>
+                            <div className='Footer__item-right-link' onClick={() => { setshowTerms(true) }}>{t('Terms & Privacy')}</div>
+                            <p className='Footer__item-right-company'>{t('*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company')}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </>
     )
-}
+})

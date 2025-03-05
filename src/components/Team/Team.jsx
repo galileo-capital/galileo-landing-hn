@@ -1,14 +1,24 @@
 import './Team.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import React, { useRef } from "react";
-export default () => {
+import React, { useEffect, useRef } from "react";
+import { useTranslation } from 'react-i18next';
+import { observer } from 'mobx-react-lite';
+import langStore from '../../store/langStore';
+
+export default observer(() => {
     const swiperRef = useRef(null);
+
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(langStore.lang);
+    }, [langStore.lang])
+
     return (
         <div className='Team' id='Team'>
             <div className='Team__container'>
                 <div className='Team__title'>
-                    <p className='Team__title-title'>/ Team /</p>
+                    <p className='Team__title-title'>/ {t('Team')} /</p>
                     <div className='Team__btn'>
                         <button className='Team__title-btn Team__title-btn-left' onClick={() => swiperRef.current?.slidePrev()}><img src="/img/arrowvio.png" alt="" /></button>
                         <button className='Team__title-btn Team__title-btn-right' onClick={() => swiperRef.current?.slideNext()}><img src="/img/arrowvio.png" alt="" /></button>
@@ -26,41 +36,51 @@ export default () => {
                         spaceBetween={50} slidesPerView={4}>
                         <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
                             <div className='Team__member-item-container'>
-                                <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
-                                <p className='Team__member-item-name'>Max Xiques</p>
+                                <div className='Team__member-item-img_wrapper'>
+                                    <img src="/img/Team/max.webp" alt="" className='Team__member-item-img' />
+                                </div>
+                                <p className='Team__member-item-name'>{t('Max Xiques')}</p>
                                 <p className='Team__member-item-position'>CEO</p>
                                 <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
-                        <SwiperSlide><div className='Team__member-item Team__member-item-top'>
-                            <div className='Team__member-item-container'>
-                                <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
-                                <p className='Team__member-item-name'>Alberto Castro</p>
-                                <p className='Team__member-item-position'>COO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
-                            </div>
-                        </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
                             <div className='Team__member-item-container'>
-                                <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
-                                <p className='Team__member-item-name'>Andres Barboza</p>
-                                <p className='Team__member-item-position'>CTO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
-                            </div>
-                        </div></SwiperSlide>
-                        <SwiperSlide><div className='Team__member-item Team__member-item-top'>
-                            <div className='Team__member-item-container'>
-                                <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
-                                <p className='Team__member-item-name'>Jose Quesada</p>
-                                <p className='Team__member-item-position'>COO</p>
-                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
-                            </div>
-                        </div></SwiperSlide>
-                        <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
-                            <div className='Team__member-item-container'>
-                                <img src="/img/teammember.png" alt="" className='Team__member-item-img' />
-                                <p className='Team__member-item-name'>Daniel Ureña</p>
+                                <div className='Team__member-item-img_wrapper'>
+                                    <img src="/img/Team/daniel.webp" alt="" className='Team__member-item-img' />
+                                </div>
+                                <p className='Team__member-item-name'>{t('Daniel Ureña')}</p>
                                 <p className='Team__member-item-position'>CMO</p>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
+                            </div>
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className='Team__member-item Team__member-item-top'>
+                            <div className='Team__member-item-container'>
+                                <div className='Team__member-item-img_wrapper'>
+                                    <img src="/img/Team/alberto.webp" alt="" className='Team__member-item-img' />
+                                </div>
+                                <p className='Team__member-item-name'>{t('Alberto Castro')}</p>
+                                <p className='Team__member-item-position'>COO</p>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
+                            </div>
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className='Team__member-item Team__member-item-top'>
+                            <div className='Team__member-item-container'>
+                                <div className='Team__member-item-img_wrapper'>
+                                    <img src="/img/Team/jose.webp" alt="" className='Team__member-item-img' />
+                                </div>
+                                <p className='Team__member-item-name'>{t('Jose Quesada')}</p>
+                                <p className='Team__member-item-position'>CCO</p>
+                                <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
+                            </div>
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
+                            <div className='Team__member-item-container'>
+                                <div className='Team__member-item-img_wrapper'>
+                                    <img src="/img/Team/andres.webp" alt="" className='Team__member-item-img' />
+                                </div>
+                                <p className='Team__member-item-name'>{t('Andres Barboza')}</p>
+                                <p className='Team__member-item-position'>CTO</p>
                                 <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
                         </div></SwiperSlide>
@@ -69,4 +89,4 @@ export default () => {
             </div>
         </div>
     )
-}
+})

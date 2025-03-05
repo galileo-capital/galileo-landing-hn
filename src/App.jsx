@@ -14,6 +14,9 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger, TextPlugin } from "gsap/all"
 import { useState } from "react"
 
+
+import './components/i18n';
+
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -27,7 +30,7 @@ function App() {
       overflow: "hidden",
     }}>
       {/* <Modal /> */}
-      {/* <Modal /> */}
+      <Modal />
       <Loader />
       <Header />
       <Hero />

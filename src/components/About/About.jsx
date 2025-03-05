@@ -1,15 +1,21 @@
 import gsap from 'gsap';
 import './About.scss';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
-export default () => {
+import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { observer } from 'mobx-react-lite';
+import langStore from '../../store/langStore';
+export default observer(() => {
     const app = useRef(null); // Создаем массив ссылок на элементы
-
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+        i18n.changeLanguage(langStore.lang);
+    }, [langStore.lang])
     useGSAP(
         () => {
             gsap.to('.About__description',
                 {
-                    text: `Galileo is a financial platform designed to bridge the gap between digital assets* and traditional banking. Whether it's managing payments, investing, or accepting digital assets* at your business, Galileo provides the tools to make finance accessible and secure for everyone.`,
+                    text: t('Galileo is a fin'),
                     ease: "linear",
                     scrollTrigger: {
                         trigger: `.About`,
@@ -29,10 +35,10 @@ export default () => {
         <div className='About_wrapper' ref={app}>
             <div className='About' id='About' >
                 <div className='About__container'>
-                    <p className='About__title'>/ What is Galileo? /</p>
+                    <p className='About__title'>/ {t('What is Galileo?')} /</p>
                     <p className='About__description'></p>
                 </div>
             </div>
         </div>
     )
-}
+})

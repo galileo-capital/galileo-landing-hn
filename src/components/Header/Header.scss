@@ -11,6 +11,25 @@
     z-index: 999;
     padding-top: 20px;
 
+    &_langSwitcher {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        padding: 0px 12px;
+
+        &_el {
+            cursor: pointer;
+            opacity: .7;
+            transition: opacity 200ms;
+
+            &_selected {
+                opacity: 1;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
     &__item {
         display: flex;
 
