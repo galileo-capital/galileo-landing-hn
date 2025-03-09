@@ -90,9 +90,22 @@
                 object-fit: cover;
                 padding: 20px;
                 border-radius: 32px;
+                max-width: 250px;
 
                 &_wrapper {
                     overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                }
+                @media (max-width: 1200px){
+                    width: 90%;
+                }
+                @media(max-width: 880px){
+                    width: 80%;
+                }
+                @media(max-width: 650px){
+                    width: 50%;
+                    min-width: 250px;
                 }
             }
 

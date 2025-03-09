@@ -28,12 +28,16 @@ const Header = observer(() => {
                 <a href='#Team'><span>/</span> {t('Team')} <span>/</span></a>
                 <a href='#Footer'><span>/</span> {t('Contacts')} <span>/</span></a>
             </div>
-            <div className='Header__item right'>
-                <div className='Header_langSwitcher'>
+            <div className='Header__item right Header__item_right'>
+            {!modalStore.isOpen && (
+                <>
+                <div className="Header__item-all">
                     <div className={`Header_langSwitcher_el ${lang === 'en' && 'Header_langSwitcher_el_selected'}`} onClick={() => { setlang('en') }}>EN</div>
                     <div className='Header_langSwitcher_del'>|</div>
-                    <div className={`Header_langSwitcher_el  ${lang === 'es' && 'Header_langSwitcher_el_selected'}`} onClick={() => { setlang('es') }}>ES</div>
+                    <div className={`Header_langSwitcher_el ${lang === 'es' && 'Header_langSwitcher_el_selected'}`} onClick={() => { setlang('es') }}>ES</div>
                 </div>
+                </>
+            )}
                 <a>{t('Get the App')} <img src="/img/arrow.png" alt="" /></a>
                 <div className={`Header__item-burger ${modalStore.isOpen ? "active" : ""}`}
                     onClick={modalStore.toggleModal} >
