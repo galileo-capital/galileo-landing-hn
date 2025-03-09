@@ -1,25 +1,29 @@
 import gsap from 'gsap';
 import './About.scss';
-import { useGSAP } from '@gsap/react';
-import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react-lite';
+import { useEffect, useRef } from 'react';
 import langStore from '../../store/langStore';
 
 export default observer(() => {
     const app = useRef(null);
     const { t, i18n } = useTranslation();
+    const textRef = useRef(null);
 
     useEffect(() => {
         i18n.changeLanguage(langStore.lang);
     }, [langStore.lang]);
 
     useEffect(() => {
-        if (!i18n.isInitialized) return; // Ждём инициализации i18n
+        if (!i18n.isInitialized) return;
 
-        const anim = gsap.to('.About__description', {
-            text: t('Galileo is a fin'),
-            ease: "linear",
+        // Анимация появления текста как печатание
+        const anim = gsap.fromTo(textRef.current, {
+            text: "", // Начинаем с пустого текста
+        }, {
+            text: t('Galileo is a fin'), // Конечный текст
+            duration: 2, // Скорость анимации
+            ease: "power1.out",
             scrollTrigger: {
                 trigger: `.About`,
                 scrub: 3,
@@ -32,7 +36,7 @@ export default observer(() => {
     }, [t]);
 
     if (!i18n.isInitialized) {
-        return <div>Cargando traducciones...</div>; // Ожидание загрузки переводов
+        return <div>Cargando traducciones...</div>;
     }
 
     return (
@@ -40,7 +44,7 @@ export default observer(() => {
             <div className='About' id='About'>
                 <div className='About__container'>
                     <p className='About__title'>/ {t('What is Galileo?')} /</p>
-                    <p className='About__description'>/ {t('Galileo is a financial platform designed to bridge the gap between digital assets* and traditional banking. Whether it`s managing payments, investing, or accepting digital assets* at your business, Galileo provides the tools to make finance accessible and secure for everyone.')} /</p>
+                    <p className='About__description' ref={textRef}>/ {t('Galileo is a fin')} /</p>
                 </div>
             </div>
         </div>
