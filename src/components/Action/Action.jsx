@@ -69,7 +69,7 @@ export default observer(() => {
             </div>
             <div className='Action_decorTop_text  free_img'>
                 <div className='Action_decorTop_text_header'>
-                    $26M+
+                    {t('$26M+')}
                 </div>
                 <div className='Action_decorTop_text_subheader'>
                     {t('in transactions processed in 2024')}

@@ -97,6 +97,9 @@ export default observer(() => {
                             <p className='Footer__item-right-company'>{t('*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company')}</p>
                         </div>
                     </div>
+                    <div className='Footer__disclaimer'>
+                        ADVERTENCIA: Se advierte al público que GIO Capital Groups SA es supervisada solamente en materia de prevención de legitimación de capitales, financiamiento al terrorismo y financiamiento de la proliferación de armas de destrucción masiva, y además se encuentra sujeta a disposiciones vinculantes de la Unidad de Inteligencia Financiera del Instituto Costarricense sobre Drogas. Por lo tanto, la Sugef no supervisa en materia financiera a Gio Capital Group SA, ni los negocios que ofrece, ni su seguridad, estabilidad o solvencia.
+                    </div>
                 </div>
             </div>
         </>
