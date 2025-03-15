@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import loaderStore from '../../store/loaderStore';
 import './Background.scss';
 
 
 export default ({ bottom = false }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            loaderStore.hide()
+        }, 3000);
+    }, [])
     return (
         <div className={`Background_wrapper  Background_${bottom && 'bottom'}`} >
             <div className='Background free_img'>
