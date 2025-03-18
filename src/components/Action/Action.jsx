@@ -89,7 +89,7 @@ export default observer(() => {
                     <p className='Action__container-title'>/ {t('Galileo in Action')} /</p>
                     {/* <img src="/img/Action/bubbles.svg" alt="" className='Action__container-img' /> */}
                     <div className='Action__decorPlace' id='Clients'></div>
-                    <p className='Action__container-title Action_partners_header'>/ {t('Our clients')} /</p>
+                    {/* <p className='Action__container-title Action_partners_header'>/ {t('Our clients')} /</p>
 
                     <div className='Action__container-partnes' >
                         {
@@ -97,12 +97,12 @@ export default observer(() => {
                                 return <img src={`/img/Action/${partner}.svg`} alt="" />
                             })
                         }
-                    </div>
+                    </div> */}
                     <div className='Action__container-demo'>
-                        <img src="/img/Action/demo.svg" alt="" className='Action__container-demo-img' />
+                        <img src="/img/Action/demo.webp" alt="" className='Action__container-demo-img' />
                         <img src="/img/Action/demoPhone.png" alt="" className='Action__container-demo-img-phone' />
                         <a href='#' target='_blank'>{t('Get the App')} <img src="/img/arrow.png" alt="" /></a>
-                        <img src="/img/Action/phone.png" alt="" className='Action__container-demo-phone' />
+                        {/* <img src="/img/Action/phone.png" alt="" className='Action__container-demo-phone' /> */}
                     </div>
                 </div>
             </div>

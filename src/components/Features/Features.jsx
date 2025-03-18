@@ -77,24 +77,24 @@ export default observer(() => {
                 <div className='Features__bottom'>
                     {
                         [
-                            {
-                                img: 'folder',
-                                title: t('Yield Accounts'),
-                                content: t('Earn returns while keeping funds liquid'),
-                                soon: false
-                            },
+                            // {
+                            //     img: 'folder',
+                            //     title: t('Yield Accounts'),
+                            //     content: t('Earn returns while keeping funds liquid'),
+                            //     soon: false
+                            // },
                             {
                                 img: 'setting',
                                 title: t('Business Tools'),
                                 content: t('Integrated payroll, utilities, and World Wide payments'),
                                 soon: false
                             },
-                            {
-                                img: 'tourists',
-                                title: t('Tourist Accounts'),
-                                content: t('Integrate within the Costa Rican Banking ecosystem, make transfers and use your digital assets / USD with our Digital Assets card'),
-                                soon: true
-                            }
+                            // {
+                            //     img: 'tourists',
+                            //     title: t('Tourist Accounts'),
+                            //     content: t('Integrate within the Costa Rican Banking ecosystem, make transfers and use your digital assets / USD with our Digital Assets card'),
+                            //     soon: true
+                            // }
                         ].map((el, index) => {
                             return <Element index={index + 5} top={(index + 1) % 2} soon={el.soon} img={el.img} title={el.title} content={el.content} />
                         })
