@@ -43,6 +43,7 @@ export default observer(() => {
                                 <p className='Team__member-item-position'>CEO</p>
                                 <button className='Team__member-item-btn'><img src="/img/tg.svg" alt="" /></button>
                             </div>
+                            
                         </div></SwiperSlide>
                         <SwiperSlide><div className='Team__member-item Team__member-item-bottom'>
                             <div className='Team__member-item-container'>
