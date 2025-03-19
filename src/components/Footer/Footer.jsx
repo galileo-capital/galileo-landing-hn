@@ -87,14 +87,14 @@ export default observer(() => {
                             <div className='Footer__item-left-social'>
                                 <Media />
                             </div>
-                            <p className='Footer__item-left-company'>{t('Galileo Capital LLC. 2025. All rights reserved')}</p>
+                            {/* <p className='Footer__item-left-company'>{t('Galileo Capital LLC. 2025. All rights reserved')}</p> */}
                         </div>
                         <div className='Footer__item-right'>
                             <a href="#Features" className='Footer__item-right-link'>{t('Features')}</a>
                             <a href="#About" className='Footer__item-right-link'>{t('About Galileo')}</a>
                             {/* <a href="#Footer" className='Footer__item-right-link'>Contact Us</a> */}
                             <div className='Footer__item-right-link' onClick={() => { setshowTerms(true) }}>{t('Terms & Privacy')}</div>
-                            <p className='Footer__item-right-company'>{t('*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company')}</p>
+                            {/* <p className='Footer__item-right-company'>{t('*Digital assets services are proveded by Galileo Capital LLC a US Fincen registered company')}</p> */}
                         </div>
                     </div>
                     {/* <div className='Footer__disclaimer'>
