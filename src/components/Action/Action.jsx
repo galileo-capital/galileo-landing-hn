@@ -75,15 +75,19 @@ export default observer(() => {
                     {t('in transactions processed in 2024')}
                 </div>
             </div>
-            <div className='Action_decorTop Action_decor1 free_img'>
-                <img src="/img/Action/bubble1.webp" alt="" />
-            </div>
+            {
+                langStore.lang === 'es' && <div className='Action_decorTop Action_decor1 free_img'>
+                    <img src="/img/Action/bubble1.webp" alt="" />
+                </div>
+            }
             <div className='Action_decorTop Action_decor2 free_img'>
                 {/* <img src="/img/Action/bubble2.webp" alt="" /> */}
             </div>
-            <div className='Action_decorTop Action_decor3 free_img'>
-                <img src="/img/Action/bubble3.webp" alt="" />
-            </div>
+            {
+                langStore.lang === 'es' && <div className='Action_decorTop Action_decor3 free_img'>
+                    <img src="/img/Action/bubble3.webp" alt="" />
+                </div>
+            }
             <div className='Action' id='Action'>
                 <div className='Action__container'>
                     <p className='Action__container-title'>/ {t('Galileo in Action')} /</p>
@@ -106,6 +110,6 @@ export default observer(() => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 })

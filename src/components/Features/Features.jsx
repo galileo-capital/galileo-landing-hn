@@ -70,6 +70,9 @@ export default observer(() => {
                                 content: t('Access global financial opportunities with ease'),
                             },
                         ].map((el, index) => {
+                            if ([1, 2].includes(index) && langStore.lang === 'en') {
+                                return
+                            }
                             return <Element index={index} top={index % 2} small img={el.img} title={el.title} content={el.content} />
                         })
                     }
