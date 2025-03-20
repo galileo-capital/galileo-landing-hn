@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class LangStore {
-    lang = 'en'
+    lang = 'es'
 
     constructor() {
         makeAutoObservable(this);
