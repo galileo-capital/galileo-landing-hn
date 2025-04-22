@@ -1,0 +1,27 @@
+.ModalComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(#6C1EEC, .8), #0008);
+  z-index: 999;
+  padding: 32px;
+  cursor: pointer;
+  z-index: 99;
+  &_body {
+    background: #000;
+    border-radius: 32px;
+    border-top: 1px solid #6C1EEC;
+    border-right: 1px solid #6C1EEC;
+    padding: 28px;
+    width: 100%;
+    max-width: 800px;
+    max-height: calc(100vh - 64px);
+    overflow-y: scroll;
+    cursor: default;
+  }
+}

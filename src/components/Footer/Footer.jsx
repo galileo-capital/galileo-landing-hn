@@ -4,8 +4,10 @@ import './Footer.scss';
 import { useTranslation } from 'react-i18next';
 import { observer } from 'mobx-react-lite';
 import langStore from '../../store/langStore';
+import GetTheApp from '../GetTheApp/GetTheApp';
 export default observer(() => {
     const [showTerms, setshowTerms] = useState(false);
+    const [showGetTheApp, setShowGetTheApp] = useState(false);
 
 
     const { t, i18n } = useTranslation();
@@ -78,8 +80,11 @@ export default observer(() => {
                 <div className='Footer__container'>
                     <p className='Footer__title'>{t('Start Using Galileo Today!')}</p>
                     <div className='Footer__btn'>
-                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-left'>{t('Contact us')}</a>
-                        <a href='#' target='_blank' className='Footer__btn-item Footer__btn-item-right'>{t('Get the App')}  <img src={`${import.meta.env.VITE_APP_BASE_PATH}/img/arrow.png`} alt="" /></a>
+                        <a href='mailto:notificaciones@galileo.finance' target='_blank' className='Footer__btn-item Footer__btn-item-left'>{t('Contact us')}</a>
+                        <a href='#' onClick={e => {
+                            e.preventDefault();
+                            setShowGetTheApp(true);
+                        }} className='Footer__btn-item Footer__btn-item-right'>{t('Get the App')}  <img src={`${import.meta.env.VITE_APP_BASE_PATH}/img/arrow.png`} alt="" /></a>
                     </div>
                     <div className='Footer__item'>
                         <div className='Footer__item-left'>
@@ -101,6 +106,7 @@ export default observer(() => {
                         ADVERTENCIA: Se advierte al público que GIO Capital Groups SA es supervisada solamente en materia de prevención de legitimación de capitales, financiamiento al terrorismo y financiamiento de la proliferación de armas de destrucción masiva, y además se encuentra sujeta a disposiciones vinculantes de la Unidad de Inteligencia Financiera del Instituto Costarricense sobre Drogas. Por lo tanto, la Sugef no supervisa en materia financiera a Gio Capital Group SA, ni los negocios que ofrece, ni su seguridad, estabilidad o solvencia.
                     </div> */}
                 </div>
+                    { showGetTheApp && <GetTheApp onRequestClose={() => setShowGetTheApp(false)}/> }
             </div>
         </>
     )

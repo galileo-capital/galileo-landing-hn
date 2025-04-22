@@ -48,12 +48,16 @@
     &_text {
       width: 100% !important;
       top: 365px;
-      left: 15px;
+      left: 5px;
       z-index: 99;
       flex-wrap: wrap;
 
       @media(max-width: 880px) {
-        top: calc(40vw + 50px);
+        top: calc(40vw + 80px);
+      }
+
+      @media(max-width: 550px) {
+        top: 230px;
       }
 
       &_header {
