@@ -4,8 +4,10 @@ import { modalStore } from "../../store/modal";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import langStore from "../../store/langStore";
+import GetTheApp from "../GetTheApp/GetTheApp";
 const Header = observer(() => {
 
+    const [showGetTheApp, setShowGetTheApp] = useState(false);
     const { t, i18n } = useTranslation();
     useEffect(() => {
         i18n.changeLanguage(langStore.lang);
@@ -24,7 +26,6 @@ const Header = observer(() => {
             <div className='Header__item center'>
                 <a href='#About'><span>/</span> {t('About')} <span>/</span></a>
                 <a href='#Features'><span>/</span> {t('Features')} <span>/</span></a>
-                <a href='#Clients'><span>/</span> {t('Our clients')} <span>/</span></a>
                 <a href='#Team'><span>/</span> {t('Team')} <span>/</span></a>
                 <a href='#Footer'><span>/</span> {t('Contacts')} <span>/</span></a>
             </div>
@@ -38,7 +39,11 @@ const Header = observer(() => {
                 </div>
                 </>
             )} */}
-                <a>{t('Get the App')} <img src={`${import.meta.env.VITE_APP_BASE_PATH}/img/arrow.png`} alt="" /></a>
+                { showGetTheApp && <GetTheApp onRequestClose={() => setShowGetTheApp(false)}/> }
+                <a href="#" onClick={e => {
+                    e.preventDefault();
+                    setShowGetTheApp(true);
+                }}>{t('Get the App')} <img src={`${import.meta.env.VITE_APP_BASE_PATH}/img/arrow.png`} alt="" /></a>
                 <div className={`Header__item-burger ${modalStore.isOpen ? "active" : ""}`}
                     onClick={modalStore.toggleModal} >
                     <span></span>
@@ -46,6 +51,7 @@ const Header = observer(() => {
                     <span></span>
                 </div>
             </div>
+            { showGetTheApp && <GetTheApp onRequestClose={() => setShowGetTheApp(false)}/> }
         </div>
     );
 });
